@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,24 +13,56 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
-        td, th {
+        td,
+        th {
             border: 1px solid black;
             padding: 10px;
         }
 
-        thead, tfoot {
-            background-color: gray;
+        caption {
+            font-size: 1.0em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead,
+        tfoot {
+            background-color: rgb(38, 38, 38);
             color: white;
         }
 
-        .num {
-            text-align: right;
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(38, 38, 38);
         }
 
+        tbody>tr:nth-child(odd) {
+            /* 2n-1*/
+            background-color: white;
+            /*font-weight: bold;*/
+        }
+
+        tbody>tr:nth-child(even) {
+            /* 2n */
+            background-color: lightgray;
+            /*text-decoration: underline;*/
+        }
+
+        /*tbody>tr:nth-child(2n) {
+            background-color: lightgray;
+        }*/
+
+        td.num {
+            text-align: right;
+        }
     </style>
 </head>
+
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!-- 
@@ -44,10 +77,13 @@
     -->
 
     <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -162,10 +198,18 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>203.078.389</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor assumenda accusantium deserunt quisquam! Facilis voluptatibus minima officia earum delectus, error dolore odio modi veniam repellendus eveniet numquam suscipit mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta, maiores molestiae perspiciatis ex voluptatem possimus saepe similique modi assumenda. Et perferendis impedit nesciunt veritatis voluptatibus fugit, hic nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quos facilis eos similique quo totam debitis omnis accusantium esse earum corrupti culpa possimus quaerat sunt animi incidunt enim neque officia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor assumenda accusantium deserunt quisquam! Facilis voluptatibus minima officia earum delectus, error dolore odio modi veniam repellendus eveniet numquam suscipit mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta, maiores molestiae perspiciatis ex voluptatem possimus saepe similique modi assumenda. Et perferendis impedit nesciunt veritatis voluptatibus fugit, hic nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quos facilis eos similique quo totam debitis omnis accusantium esse earum corrupti culpa possimus quaerat sunt animi incidunt enim neque officia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor assumenda accusantium deserunt quisquam! Facilis voluptatibus minima officia earum delectus, error dolore odio modi veniam repellendus eveniet numquam suscipit mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta, maiores molestiae perspiciatis ex voluptatem possimus saepe similique modi assumenda. Et perferendis impedit nesciunt veritatis voluptatibus fugit, hic nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quos facilis eos similique quo totam debitis omnis accusantium esse earum corrupti culpa possimus quaerat sunt animi incidunt enim neque officia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor assumenda accusantium deserunt quisquam! Facilis voluptatibus minima officia earum delectus, error dolore odio modi veniam repellendus eveniet numquam suscipit mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta, maiores molestiae perspiciatis ex voluptatem possimus saepe similique modi assumenda. Et perferendis impedit nesciunt veritatis voluptatibus fugit, hic nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quos facilis eos similique quo totam debitis omnis accusantium esse earum corrupti culpa possimus quaerat sunt animi incidunt enim neque officia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor assumenda accusantium deserunt quisquam! Facilis voluptatibus minima officia earum delectus, error dolore odio modi veniam repellendus eveniet numquam suscipit mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta, maiores molestiae perspiciatis ex voluptatem possimus saepe similique modi assumenda. Et perferendis impedit nesciunt veritatis voluptatibus fugit, hic nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quos facilis eos similique quo totam debitis omnis accusantium esse earum corrupti culpa possimus quaerat sunt animi incidunt enim neque officia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor assumenda accusantium deserunt quisquam! Facilis voluptatibus minima officia earum delectus, error dolore odio modi veniam repellendus eveniet numquam suscipit mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta, maiores molestiae perspiciatis ex voluptatem possimus saepe similique modi assumenda. Et perferendis impedit nesciunt veritatis voluptatibus fugit, hic nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quos facilis eos similique quo totam debitis omnis accusantium esse earum corrupti culpa possimus quaerat sunt animi incidunt enim neque officia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor assumenda accusantium deserunt quisquam! Facilis voluptatibus minima officia earum delectus, error dolore odio modi veniam repellendus eveniet numquam suscipit mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta, maiores molestiae perspiciatis ex voluptatem possimus saepe similique modi assumenda. Et perferendis impedit nesciunt veritatis voluptatibus fugit, hic nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quos facilis eos similique quo totam debitis omnis accusantium esse earum corrupti culpa possimus quaerat sunt animi incidunt enim neque officia?</p>
 </body>
+
 </html>
